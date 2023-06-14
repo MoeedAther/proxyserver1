@@ -8,7 +8,7 @@ dotenv.config();
 
 
 const PORT = process.env.PORT || 5000;
-const host = '0.0.0.0';
+const host = '127.0.0.1';
 
 const  app=express()
 
