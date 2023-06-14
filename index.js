@@ -7,7 +7,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
+const host = '0.0.0.0';
 
 const  app=express()
 
@@ -292,8 +293,8 @@ app.post("/Simpleswap/transaction", async (req, res)=>{
 
 })
 
-app.listen(5000,()=>{
-    console.log("Server listening at "+5000)
+app.listen(PORT, host()=>{
+    console.log("Server listening at "+ 5000)
 })
 
     // "start": "node index.js",
